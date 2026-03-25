@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Log everything
-exec > /var/log/install-script.log 2>&1
+exec > >(sudo tee -a /var/log/install-script.log) 2>&1
 
 echo "Starting DevOps Tools Installation..."
 
